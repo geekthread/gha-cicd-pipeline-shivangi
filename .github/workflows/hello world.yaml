@@ -7,5 +7,5 @@ jobs:
       - name: clone repository
         run: |
           echo "Cloning repository  "
-          git clone https://github.com/${(github.repository)}/gha-cicd-pipeline-shivangi.git myfolder
+          git clone https://github.com/${(github.repository)}/.git myfolder
           cd myfolder && ls -la
