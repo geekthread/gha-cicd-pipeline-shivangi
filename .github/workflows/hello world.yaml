@@ -4,6 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World. step
-        run: echo "Hello World."
-        
+      - name: clone repository
+        run: |
+          echo "Cloning repository  "
+          echo "github context : ${{ toJson(github)}}"
+          git clone https://github.com/${(github.repository)}/gha-cicd-pipeline-shivangi.git myfolder
+          cd myfolder && ls -la
