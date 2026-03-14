@@ -5,7 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone repository
-        run: |
-          echo "Cloning repository  "
-          git clone https://github.com/${{ github.repository }}.git myfolder
-          cd myfolder && ls -la
+        uses: actions/checkout@v6
